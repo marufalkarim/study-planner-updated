@@ -38,8 +38,12 @@ const app = express();
 
 // --- 3. Middleware ---
 
-// CORS: Allows the React frontend (port 3000) to make requests to the Express backend (port 5000).
-app.use(cors()); 
+// CORS: Allows the React frontend to make requests to the Express backend.
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Body Parser: Allows Express to read JSON data from the request body (req.body).
 app.use(express.json());

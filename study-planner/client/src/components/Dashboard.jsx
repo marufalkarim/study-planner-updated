@@ -275,7 +275,7 @@ function Dashboard() {
 
     try {
       const res = await axios.get(API_URL, { 
-        timeout: 5000,
+        timeout: 15000,
         headers: {
             'Authorization': `Bearer ${currentUser.uid}`
         }
