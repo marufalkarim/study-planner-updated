@@ -4,6 +4,7 @@
   "description": "Backend API for Study Planner",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "server": "nodemon --exec node server.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },

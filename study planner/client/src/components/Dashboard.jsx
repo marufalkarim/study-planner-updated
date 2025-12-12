@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 // ----------------------------------------------
 // BACKEND API URL
 // ----------------------------------------------
-const API_URL = "http://localhost:5000/api/tasks";
+const API_URL = (process.env.REACT_APP_API_URL || "http://localhost:5000") + "/api/tasks";
 
 // ----------------------------------------------
 // MOCK DATA (used only if backend fails)
